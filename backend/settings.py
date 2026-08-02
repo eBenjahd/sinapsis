@@ -46,6 +46,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'backend.middlewares.ProcessMiddleware',
+    'backend.middlewares.TimeToRunMiddleware',
+    'backend.middlewares.TooManyRequestMiddleware',
 ]
 
 CORS_ALLOW_CREDENTIALS = True

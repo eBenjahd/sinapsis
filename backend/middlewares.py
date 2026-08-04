@@ -75,3 +75,24 @@ class TooManyRequestMiddleware:
 
         return response
 
+
+class BlockMaintenanceMiddleware:
+
+
+    def __init__(self, get_response):
+        self.get_response = get_response
+        self.maintenance_mode = True
+
+    def __call__(self, request):
+        
+        if self.maintenance_mode:
+
+            if request.user.is_staff:
+                return self.get_response(request)
+            
+            return JsonResponse(
+                {'detail' : 'Server is under maintenance'},
+                status =503
+            )
+
+        return self.get_response(request)

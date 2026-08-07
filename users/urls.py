@@ -1,6 +1,6 @@
 from django.urls import path
 from users.views import RegisterView
-from users.views import LoginView, CookieTokenRefreshView, UserMeView, UserView
+from users.views import LoginView, CookieTokenRefreshView, UserMeView, UserView, UserActiveView, SearchUsersView, SearchEmailView
 
 urlpatterns = [
     path('register/', view = RegisterView.as_view()),
@@ -17,4 +17,7 @@ urlpatterns = [
             }
         ), name="user-detail", 
     ),
+    path('users/active/', UserActiveView.as_view(), name='users_active'),
+    path('search/users/', SearchUsersView.as_view(), name='search_users'),
+    path('search/email/', SearchEmailView.as_view(), name='search_email'),
 ]

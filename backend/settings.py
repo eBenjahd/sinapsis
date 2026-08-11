@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'channels',
     # own-apps
     'chat',
+    'academy',
 ]
 
 MIDDLEWARE = [
@@ -48,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'backend.middlewares.ProcessMiddleware',
     'backend.middlewares.TimeToRunMiddleware',
-    'backend.middlewares.TooManyRequestMiddleware',
+    # 'backend.middlewares.TooManyRequestMiddleware',
 ]
 
 CORS_ALLOW_CREDENTIALS = True

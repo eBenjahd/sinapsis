@@ -1,0 +1,6 @@
+from .course_serializer import CourseSerializer
+from .lesson_serializer import LessonSerializer
+from .teacher_serializer import TeacherSerializer
+from .enrollment_serializer import EnrollmentSerializer
+from .review_serializer import Review
+from .simple_course_serializer import CourseSimpleSerializer

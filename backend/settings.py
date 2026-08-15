@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     # own-apps
     'chat',
     'academy',
+    'prueba_tecnica',
 ]
 
 MIDDLEWARE = [

@@ -11,3 +11,7 @@ from .course_view import (
     TotalStudentView,
     AverageRatingView
 )
+
+from .teacher_view import (
+    CreateTeacherView
+)

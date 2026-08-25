@@ -10,7 +10,8 @@ from academy.views import (
     PublishedView,
     NotPublishedView,
     TotalStudentView,
-    AverageRatingView
+    AverageRatingView,
+    CreateTeacherView
 )
 
 urlpatterns = [
@@ -25,4 +26,5 @@ urlpatterns = [
     path("not_published/", NotPublishedView.as_view(), name="not_published"),
     path("total_student/", TotalStudentView.as_view(), name="total_student"),
     path("avg_rating/", AverageRatingView.as_view(), name="avg_rating"),
+    path('create/teacher/' ,CreateTeacherView.as_view(), name='create_teacher'),
 ]
